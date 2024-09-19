@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  margin: 0px;
+}
+h1 {
+  text-align: center;
+}
+h1,
+h3,
+p,
+label {
+  margin: 30px;
+  color: rgb(255, 222, 202);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#wrapper {
+  display: grid;
+  row-gap: 100px;
+  background-color: rgb(44, 43, 43);
+}
+
+/* NAVBAR */
+
+.navdiv {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 0px 20px;
+  background-color: rgb(36, 36, 36);
+}
+.uldiv {
+  min-width: fit-content;
+  display: flex;
+  gap: 10px;
+  width: 44%;
+  justify-content: space-around;
+}
+
+li {
+  width: fit-content;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  list-style-type: none;
+  padding: 8px;
+  box-shadow: 0px 0px 1px rgb(0, 0, 0);
+  background-color: rgb(105, 18, 18);
+  border-style: solid;
+  border-radius: 14px;
+  border-color: rgb(0, 0, 0);
+}
+
+li {
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+li:hover {
+  color: rgb(46, 46, 46);
+  background-color: rgb(183, 183, 183);
+}
+
+li:active {
+  background-color: rgb(255, 255, 255);
+  transition: 0.1s;
+}
+
+.logo {
+  margin-right: 10px;
+  float: right;
+  width: 150px;
+}
+
+/* NAVBAR END */
+
+/* BLOGG */
+
+@media screen and (max-width: 700px) {
+  .mainbloggdiv {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+    min-width: 450px;
+  }
+  .iframediv {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.mainbloggdiv {
+  margin: 10px;
+  column-gap: 10px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-bottom: 300px;
+}
+
+.bloggdiv {
+  box-shadow: 0px 0px 5px;
+  border-style: solid;
+  border-radius: 10px;
+  background-color: rgb(105, 18, 18);
+  max-width: 60%;
+}
+
+h1 {
+  font-size: clamp(1.3rem, 2.3vw, 2.3rem);
+}
+
+.bloggtext {
+  font-size: clamp(1rem, 1.4vw, 1.1rem);
+  text-align: left;
+}
+
+.link {
+  cursor: pointer;
+  color: rgb(0, 225, 255);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.typer {
+  max-width: 80%;
+  width: calc(50% - 10px);
+}
+
+h3 {
+  font-size: clamp(1.1rem, 1.6vw, 1.9rem);
+
+  margin-bottom: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(255, 222, 202);
+}
+
+.iframediv {
+  max-width: 80%;
+
+  display: flex;
+  row-gap: 23px;
+  flex-direction: column;
+}
+
+.iframe {
+  aspect-ratio: 16/9;
+  width: 100%;
+  box-shadow: 0px 0px 5px;
+  border: 1px solid;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+audio {
+  width: 100%;
+  min-width: 50%;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* BLOGG END */
+
+/* KONTAKT */
+
+form {
+  margin: 30px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fdiv {
+  justify-content: space-between;
+  display: flex;
+  gap: 20px;
+}
+
+.emaildiv {
+  text-align: start;
+}
+.fnamn {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+.meddiv {
+  text-align: start;
+}
+
+.textmed {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 170px;
+}
+.emaildiv input {
+  width: 100%;
+}
+
+.fnamn input {
+  width: 100%;
+}
+
+input {
+  height: 45px;
+  border: 1px solid;
+  border-radius: 12px;
+  padding: 13px;
+  box-sizing: border-box;
+  background-color: rgb(219, 219, 219);
+  box-shadow: 0px 0px 1px;
+}
+
+input:hover {
+  background-color: rgb(209, 195, 169);
+  transition: 0.1s;
+}
+
+input:active {
+  background-color: beige;
+}
+
+label {
+  text-align: start;
+  margin: 3px;
+}
+.kontaktH {
+  font-size: clamp(1.3rem, 2.3vw, 2.3rem);
+}
+
+.kontaktP p {
+  margin-bottom: 0px;
+  margin-top: 7px;
+  text-align: start;
+}
