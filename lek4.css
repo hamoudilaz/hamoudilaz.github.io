@@ -6,6 +6,9 @@ body {
 h1 {
   text-align: center;
 }
+a {
+  text-decoration: none;
+}
 h1,
 h3,
 p,
@@ -32,11 +35,80 @@ label {
   box-shadow: 0px 0px 20px;
   background-color: rgb(36, 36, 36);
 }
+
+.dropdowndiv {
+  display: none;
+}
+.dropdown {
+  box-shadow: 0px 0px 1px rgb(0, 0, 0);
+  background-color: rgb(20, 20, 20);
+  border-radius: 2px;
+  border: 1px solid black;
+  position: absolute;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.dropbtn a {
+  text-align: start;
+  font-size: 15px;
+  line-height: 40px;
+  color: white;
+  display: block;
+  padding: 0px 20px;
+
+  color: rgb(255, 222, 202);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dropbtn a:hover {
+  cursor: pointer;
+  background-color: rgb(77, 0, 0);
+  transition: 0.2s;
+}
+
+.dropdowndiv:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropbtn {
+  color: rgb(209, 209, 209);
+
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 700px) {
+  .dropdowndiv {
+    display: flex;
+    align-items: center;
+  }
+
+  li {
+    display: none;
+  }
+
+  .navdiv {
+    padding: 9px;
+  }
+
+  .bloggdiv {
+    min-width: 90%;
+  }
+}
+
 .uldiv {
   min-width: fit-content;
   display: flex;
   gap: 10px;
-  width: 44%;
+  width: 50%;
   justify-content: space-around;
 }
 
@@ -72,7 +144,7 @@ li:active {
 .logo {
   margin-right: 10px;
   float: right;
-  width: 150px;
+  max-width: 150px;
 }
 
 /* NAVBAR END */
