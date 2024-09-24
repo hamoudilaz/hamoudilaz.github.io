@@ -1,19 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 body {
+  background-color: rgb(32, 32, 32);
+  background-image: linear-gradient(
+      45deg,
+      black 25%,
+      transparent 25%,
+      transparent 75%,
+      black 75%,
+      black
+    ),
+    linear-gradient(
+      45deg,
+      black 25%,
+      transparent 25%,
+      transparent 75%,
+      black 75%,
+      black
+    ),
+    linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+  background-size: 15px 15px, 15px 15px, 15px 7.5px; /* Slightly smaller size */
+  background-position: 0px 0px, 7.5px 7.5px, 0px 0px; /* Adjusted position */
+
   margin: 0px;
 }
-h1 {
+/*------------- SMALL TINGS---------------- */
+a {
+  cursor: pointer;
+}
+h3 {
+  font-weight: 700;
   text-align: center;
 }
-a {
-  text-decoration: none;
+h1 {
+  font-weight: 700;
+  font-size: clamp(1.3rem, 2.3vw, 2.3rem);
+  text-align: center;
+}
+.someem {
+  color: rgba(255, 222, 202, 0.75);
+}
+
+h4 {
+  margin: 0px;
 }
 h1,
 h3,
 p,
 label {
-  margin: 30px;
   color: rgb(255, 222, 202);
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -23,18 +57,64 @@ label {
 #wrapper {
   display: grid;
   row-gap: 100px;
-  background-color: rgb(44, 43, 43);
 }
+
+/*------------- SMALL TINGS END ---------------- */
 
 /*  -------------------- NAVBAR ----------------------- */
 
 .navdiv {
+  width: 100%;
+  position: fixed;
   align-items: center;
   display: flex;
   justify-content: space-between;
   box-shadow: 0px 0px 20px;
-  background-color: rgb(36, 36, 36);
+  background-color: rgb(101, 0, 0);
 }
+.uldiv {
+  min-width: fit-content;
+  display: flex;
+  gap: 10px;
+  width: 50%;
+  justify-content: space-around;
+}
+
+.navdiv ul li {
+  width: fit-content;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  list-style-type: none;
+  padding: 8px;
+  border: 1px solid rgb(101, 0, 0);
+  border-radius: 50px;
+}
+
+li {
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.navdiv ul li:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(198, 198, 198);
+  border: 1px solid black;
+}
+
+.navdiv ul li:active {
+  background-color: rgb(255, 255, 255);
+  transition: 0.1s;
+}
+
+.logo {
+  margin-right: 10px;
+  float: right;
+  max-width: 150px;
+}
+
+/* ----------------------- NAVBAR END-----------------------  */
+
 /* DROPDOWN */
 
 .dropdowndiv {
@@ -55,7 +135,7 @@ label {
 .dropbtn a {
   text-align: start;
   font-size: 15px;
-  line-height: 40px;
+  line-height: 35px;
   color: white;
   display: block;
   padding: 0px 20px;
@@ -68,7 +148,7 @@ label {
 
 .dropbtn a:hover {
   cursor: pointer;
-  background-color: rgb(77, 0, 0);
+  background-color: rgb(101, 0, 0);
   transition: 0.2s;
 }
 
@@ -86,81 +166,47 @@ label {
   background-color: transparent;
 }
 
+/*------------- DROPDOWN END---------------- */
+
+/*------------- MEDIA QUERIES---------------- */
+
 @media screen and (max-width: 700px) {
   .dropdowndiv {
     display: flex;
     align-items: center;
   }
 
-  li {
+  .navdiv ul li {
     display: none;
   }
-
+  .kallor {
+    text-align: start;
+  }
   .navdiv {
     padding: 9px;
   }
+  .secondbloggdiv {
+    max-width: 80%;
+    flex-direction: column;
+  }
+  .iframediv {
+    flex-direction: column;
+    row-gap: 30px;
+    max-width: 80%;
+  }
 
-  .bloggdiv {
-    min-width: 90%;
+  .sidbar {
+    display: none;
+  }
+
+  .contentdiv {
+    max-width: 80%;
   }
 }
-/* DROPDOWN END */
-
-.uldiv {
-  min-width: fit-content;
-  display: flex;
-  gap: 10px;
-  width: 50%;
-  justify-content: space-around;
-}
-
-li {
-  width: fit-content;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  list-style-type: none;
-  padding: 8px;
-  box-shadow: 0px 0px 1px rgb(0, 0, 0);
-  background-color: rgb(105, 18, 18);
-  border-style: solid;
-  border-radius: 14px;
-  border-color: rgb(0, 0, 0);
-}
-
-li {
-  transition: 0.4s;
-  cursor: pointer;
-}
-
-li:hover {
-  color: rgb(46, 46, 46);
-  background-color: rgb(183, 183, 183);
-}
-
-li:active {
-  background-color: rgb(255, 255, 255);
-  transition: 0.1s;
-}
-
-.logo {
-  margin-right: 10px;
-  float: right;
-  max-width: 150px;
-}
-
-/* ----------------------- NAVBAR END-----------------------  */
+/*------------- MEDIA QUERIES END ---------------- */
 
 /*-----------------------  BLOGG ----------------------- */
 
-@media screen and (max-width: 700px) {
-  .mainbloggdiv {
-    flex-direction: column;
-    align-items: center;
-    row-gap: 40px;
-    min-width: 450px;
-  }
-}
 .mainbloggdiv {
   align-items: center;
   flex-direction: column;
@@ -169,30 +215,75 @@ li:active {
   row-gap: 100px;
   display: flex;
   justify-content: space-around;
-  text-align: center;
   margin-bottom: 300px;
 }
-
+.secondbloggdiv {
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  gap: 30px;
+  width: 95%;
+}
 .bloggdiv {
+  text-align: center;
   box-shadow: 0px 0px 5px;
   border-style: solid;
   border-radius: 10px;
-  background-color: rgb(105, 18, 18);
-  max-width: 60%;
+  background-color: rgb(101, 0, 0);
+  flex: 3;
+}
+.bloggdiv2 {
+  flex: 1;
+  box-shadow: 0px 0px 5px;
+  border-style: solid;
+  border-radius: 10px;
+  background-color: rgb(101, 0, 0);
+
+  transition: position 0.3s;
 }
 
-h1 {
-  font-size: clamp(1.3rem, 2.3vw, 2.3rem);
+.infotext {
+  margin: 20px;
+  text-align: start;
 }
-
 .bloggtext {
+  padding-top: 20px;
+  margin: 30px;
   font-size: clamp(1rem, 1.4vw, 1.1rem);
   text-align: left;
 }
 
+.kallor {
+  line-height: 25px;
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+}
+a {
+  text-align: center;
+  text-decoration: none;
+}
+
+.undertext {
+  text-align: center;
+  font-size: 14px;
+}
+
 .link {
-  cursor: pointer;
   color: rgb(0, 225, 255);
+}
+
+.link2 {
+  color: rgba(254, 255, 255, 0.678);
+}
+
+.link2:hover {
+  color: rgb(158, 158, 158);
+  transition: 0.2s;
+  text-decoration: underline;
+}
+.link2:active {
+  color: rgb(117, 117, 117);
 }
 
 .link:hover {
@@ -212,25 +303,18 @@ h3 {
   color: rgb(255, 222, 202);
 }
 
-@media screen and (max-width: 700px) {
-  .iframediv {
-    flex-direction: column;
-    row-gap: 30px;
-  }
-}
-
 .contentdiv {
+  width: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5px 30px 50px;
   border-radius: 10px;
   border: 1px solid black;
-  background-color: rgb(105, 18, 18);
-  max-width: 80%;
+  background-color: rgb(101, 0, 0);
 }
 .iframediv {
-  max-width: 100%;
+  padding-bottom: 25px;
+  width: 95%;
   display: flex;
   column-gap: 23px;
 }
@@ -243,9 +327,15 @@ h3 {
   font-size: clamp(19px, 1.5vw, 24px);
 }
 .videobox {
+  width: 100%;
   justify-content: space-between;
   display: flex;
   flex-direction: column;
+}
+
+.videobox p {
+  font-size: clamp(1rem, 1.4vw, 1.1rem);
+  font-weight: 300;
 }
 
 .iframe {
@@ -257,13 +347,8 @@ h3 {
   overflow: hidden;
 }
 
-audio {
-  width: 100%;
-  min-width: 50%;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  display: block;
-  margin: 0 auto;
+.videobox p {
+  text-align: center;
 }
 
 /* ----------------------- BLOGG END-----------------------  */
@@ -336,8 +421,59 @@ label {
 }
 
 .kontaktP p {
-  margin-bottom: 0px;
-  margin-top: 7px;
+  margin: 7px 30px 0px 30px;
+
   text-align: start;
 }
 /* ----------------------- KONTAKT END -----------------------  */
+
+/* ----------------------- FOOTER -----------------------  */
+.footerdiv {
+  box-shadow: 0px 0px 5px;
+  align-items: start;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(101, 0, 0);
+}
+
+.footerdivinfo {
+  margin: 0px 40px;
+}
+
+.footerdivinfo h3 {
+  margin: 14px;
+}
+.snabblink h3 {
+  font-size: 20px;
+}
+.footerdiv ul li {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  list-style-type: none;
+  padding: 8px;
+  border: 1px solid rgb(101, 0, 0);
+  border-radius: 50px;
+}
+.snabblink {
+  display: flex;
+  flex-direction: c;
+}
+
+.youtube {
+  width: clamp(57px, 1.5vw, 24px);
+}
+.twitter {
+  padding-left: 10px;
+  width: clamp(48px, 1.5vw, 24px);
+}
+
+.instagram {
+  width: clamp(75px, 1.5vw, 24px);
+}
+
+.icondiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
