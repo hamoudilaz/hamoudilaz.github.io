@@ -41,6 +41,10 @@ h1 {
   color: rgba(255, 222, 202, 0.75);
 }
 
+.emtext {
+  font-family: italic;
+}
+
 h4 {
   margin: 0px;
 }
@@ -202,7 +206,11 @@ li {
   .contentdiv {
     max-width: 80%;
   }
+  .Mediaicon {
+    display: none;
+  }
 }
+
 /*------------- MEDIA QUERIES END ---------------- */
 
 /*-----------------------  BLOGG ----------------------- */
@@ -297,7 +305,6 @@ a {
 
 h3 {
   font-size: clamp(1.1rem, 1.6vw, 1.9rem);
-
   margin-bottom: 30px;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(255, 222, 202);
@@ -446,44 +453,118 @@ label {
   background-color: rgb(101, 0, 0);
 }
 
+.footerdiv h3 {
+  font-weight: 700;
+  margin: 10px;
+}
+
 .footerdivinfo {
-  margin: 0px 40px;
+  flex: 1;
+  width: max-content;
+  margin-left: 20px;
 }
 
 .footerdivinfo h3 {
-  margin: 14px;
+  white-space: nowrap;
+  font-weight: 700;
+  margin: 10px;
+  font-size: clamp(1.1rem, 1.5vw, 1.9rem);
 }
-.snabblink h3 {
-  font-size: 20px;
-}
-.footerdiv ul li {
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  list-style-type: none;
-  padding: 8px;
-  border: 1px solid rgb(101, 0, 0);
-  border-radius: 50px;
-}
-.snabblink {
-  display: flex;
-  flex-direction: c;
+.info1 {
+  margin: 6px;
+  white-space: nowrap;
+  font-size: clamp(14px, 0.1vw, 1.9rem);
 }
 
-.youtube {
-  width: clamp(57px, 1.5vw, 24px);
+.info2 {
+  margin: 6px;
+  white-space: nowrap;
+  font-size: clamp(17x, 0.1vw, 1.9rem);
+  margin-top: 15px;
+  cursor: pointer;
+  color: rgb(255, 249, 236);
+  text-decoration: underline;
+}
+.info2:hover {
+  color: rgb(255, 218, 170);
+}
+
+.info2:active {
+  color: rgb(177, 177, 177);
+}
+.adre {
+  margin-right: 2px;
+}
+
+.footerul {
+  margin: 0px;
+}
+
+.snabblink h3 {
+  font-weight: 700;
+  margin: 10px;
+  font-size: clamp(1.1rem, 1.5vw, 1.9rem);
+}
+.snabblink {
+  margin-bottom: 5px;
+  margin-right: 20px;
+  margin-left: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.line {
+  margin-bottom: 10px;
+  border: 0.5px solid rgb(255, 235, 209);
+  font-weight: 100;
+  width: 100%;
+}
+
+.footerdiv ul li {
+  font-size: clamp(14px, 0.1vw, 1.9rem);
+  text-align: start;
+  color: rgb(199, 199, 199);
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: dotted;
+  padding: 4px;
+  height: 17px;
+  border: 1px solid rgb(101, 0, 0);
+  border-radius: 50px;
+  transition: 0s;
+}
+.footerdiv ul li:hover {
+  color: rgb(250, 250, 250);
+  transition: 0.1s;
+  text-decoration: underline;
+}
+
+.footerdiv ul li:active {
+  color: rgb(166, 166, 166);
+}
+
+.Mediaicon {
+  margin-right: 20px;
+  flex: 2;
+  width: max-content;
+}
+
+.Mediaicon h3 {
+  white-space: nowrap;
+  font-weight: 700;
+  margin: 10px;
+  font-size: clamp(1.1rem, 1.5vw, 1.9rem);
 }
 .twitter {
-  padding-left: 10px;
   width: clamp(48px, 1.5vw, 24px);
 }
 
-.instagram {
-  width: clamp(75px, 1.5vw, 24px);
-}
-
 .icondiv {
+  margin: 0 auto;
+  gap: 10px;
+  width: 60%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  margin-top: 30px;
 }
