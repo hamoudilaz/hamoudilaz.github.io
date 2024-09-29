@@ -428,6 +428,16 @@ label {
 /* ----------------------- KONTAKT END -----------------------  */
 
 /* ----------------------- FOOTER -----------------------  */
+.kontaktdiv {
+  margin-top: 100px;
+  text-align: center;
+  box-shadow: 0px 0px 5px;
+  border-style: solid;
+  border-radius: 10px;
+  background-color: rgb(101, 0, 0);
+  flex: 3;
+}
+
 .footerdiv {
   box-shadow: 0px 0px 5px;
   align-items: start;
