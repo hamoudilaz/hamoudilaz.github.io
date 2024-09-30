@@ -187,19 +187,21 @@ li {
     align-items: center;
   }
 
-  .navdiv ul li {
-    display: none;
-  }
   .kallor {
     text-align: start;
+  }
+  .navdiv ul li {
+    display: none;
   }
   .navdiv {
     padding: 9px;
   }
+
   .secondbloggdiv {
     max-width: 80%;
     flex-direction: column;
   }
+
   .iframediv {
     flex-direction: column;
     row-gap: 30px;
@@ -213,12 +215,43 @@ li {
   .contentdiv {
     max-width: 80%;
   }
+
   .Mediaicon {
     display: none;
   }
 
   .kontaktdiv {
     max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .dropdowndiv {
+    flex-direction: column;
+  }
+
+  .navdiv {
+    padding: 5px;
+  }
+
+  .navdiv ul li {
+    display: none;
+  }
+  .secondbloggdiv {
+    max-width: 90%;
+  }
+
+  .iframediv {
+    row-gap: 20px;
+    max-width: 90%;
+  }
+
+  .contentdiv {
+    max-width: 90%;
+  }
+
+  .kontaktdiv {
+    max-width: 90%;
   }
 }
 
@@ -252,6 +285,9 @@ li {
   flex: 3;
 }
 
+.bloggdiv2 h3 {
+  margin: 15px 10px;
+}
 .bloggdiv h1 {
   font-weight: bold;
 }
@@ -402,6 +438,7 @@ form {
   text-align: start;
 }
 .fnamn {
+  width: 100%;
   display: flex;
   flex-direction: column;
   text-align: start;
