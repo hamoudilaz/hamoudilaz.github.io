@@ -28,6 +28,15 @@ body {
 a {
   cursor: pointer;
 }
+
+img {
+  cursor: pointer;
+}
+a:visited {
+  text-decoration: underline;
+  color: rgb(106, 0, 255);
+}
+
 h3 {
   font-weight: 700;
   text-align: center;
@@ -38,11 +47,9 @@ h1 {
   text-align: center;
 }
 .someem {
-  color: rgba(255, 222, 202, 0.75);
-}
-
-.emtext {
   font-family: italic;
+  font-size: clamp(0.65rem, 1.1vw, 1.1rem);
+  color: rgba(255, 222, 202, 0.75);
 }
 
 h4 {
@@ -209,6 +216,10 @@ li {
   .Mediaicon {
     display: none;
   }
+
+  .kontaktdiv {
+    max-width: 80%;
+  }
 }
 
 /*------------- MEDIA QUERIES END ---------------- */
@@ -223,7 +234,6 @@ li {
   row-gap: 100px;
   display: flex;
   justify-content: space-around;
-  margin-bottom: 300px;
 }
 .secondbloggdiv {
   margin-top: 200px;
@@ -240,6 +250,10 @@ li {
   border-radius: 10px;
   background-color: rgb(101, 0, 0);
   flex: 3;
+}
+
+.bloggdiv h1 {
+  font-weight: bold;
 }
 .bloggdiv2 {
   flex: 1;
@@ -281,6 +295,12 @@ a {
   color: rgb(0, 225, 255);
 }
 
+.link:hover {
+  color: rgb(0, 149, 255);
+}
+.link:active {
+  color: blue;
+}
 .link2 {
   color: rgba(254, 255, 255, 0.678);
 }
@@ -340,6 +360,9 @@ h3 {
   flex-direction: column;
 }
 
+.videotext {
+  font-size: clamp(1.2rem, 1.8vw, 1.9rem);
+}
 .videobox p {
   font-size: clamp(1rem, 1.4vw, 1.1rem);
   font-weight: 300;
@@ -410,6 +433,18 @@ input {
   box-shadow: 0px 0px 1px;
 }
 
+.skicka {
+  width: 30%;
+  margin: 0 auto;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.skicka:hover {
+  box-shadow: 0px 0px 10px rgb(94, 24, 24);
+  border: 2px solid rgb(105, 0, 0);
+}
+
 input:hover {
   background-color: rgb(209, 195, 169);
   transition: 0.1s;
@@ -424,12 +459,14 @@ label {
   margin: 3px;
 }
 .kontaktH {
+  font-weight: bold;
   font-size: clamp(1.3rem, 2.3vw, 2.3rem);
 }
 
 .kontaktP p {
+  font-size: clamp(12px, 1.1vw, 2.3rem);
   margin: 7px 30px 0px 30px;
-
+  white-space: nowrap;
   text-align: start;
 }
 /* ----------------------- KONTAKT END -----------------------  */
